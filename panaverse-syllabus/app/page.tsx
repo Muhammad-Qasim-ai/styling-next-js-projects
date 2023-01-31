@@ -1,14 +1,18 @@
 'use client'
 
 import { Box, ChakraProvider } from "@chakra-ui/react"
-import  Navbar  from "../components/navbar";
+import  WithSubnavigation  from "../components/navbar";
+import  Body  from "../components/body";
+import  LargeWithNewsletter  from "../components/footer";
 
 
 
 export default function Home() {
     return (
       <ChakraProvider>
-          <Navbar />
+          <WithSubnavigation />
+          <Body  />
+          <LargeWithNewsletter />
       </ChakraProvider>
     )
 }
