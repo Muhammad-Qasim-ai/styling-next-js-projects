@@ -77,17 +77,18 @@ import {
     return (
       <Box
         bg={useColorModeValue('gray.50', 'gray.900')}
-        color={useColorModeValue('gray.700', 'gray.200')}>
+        color={useColorModeValue('gray.700', 'gray.200')}
+        >
         <Container as={Stack} maxW={'6xl'} py={10}>
           <SimpleGrid
             templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
             spacing={8}>
             <Stack spacing={6}>
-              <Box>
+              {/* <Box>
                 <Logo color={useColorModeValue('gray.700', 'white')} />
-              </Box>
+              </Box> */}
               <Text fontSize={'sm'}>
-                © 2022 Chakra Templates. All rights reserved
+                © 2022 Panaverse Dao. All rights reserved
               </Text>
               <Stack direction={'row'} spacing={6}>
                 <SocialButton label={'Twitter'} href={'#'}>

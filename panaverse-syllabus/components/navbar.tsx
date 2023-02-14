@@ -27,11 +27,19 @@ import {
   MoonIcon,
   SunIcon,
 } from '@chakra-ui/icons';
+import Head from 'next/head';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
+    <>
+    <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
     <Box>
       <Flex
         bg={'#CCCCCC'}
@@ -39,6 +47,9 @@ export default function WithSubnavigation() {
         borderRadius={'0px 0px 10px 10px'}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
+        // flex={2}
+        mr={'0px'}
+        minW={'full'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
@@ -46,7 +57,7 @@ export default function WithSubnavigation() {
         // borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}>
         <Flex
-          flex={{ base: 1, md: 'auto' }}
+          flex={{base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}>
           <IconButton
@@ -56,7 +67,7 @@ export default function WithSubnavigation() {
             }
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
-          />
+            />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
         <Image 
@@ -65,7 +76,7 @@ export default function WithSubnavigation() {
         height={'72px'}
         // top={'8px'}
         // left={'50px'}
-        src="https://www.panaverse.co/red-p-logo-text_dao_croped.png"></Image>
+        src="/logo.jpg"></Image>
             
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10} position={'absolute'}
@@ -84,7 +95,7 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={5}>
-                <Button mr={'0px'} bg={'#CCCCCC'} _hover={{bg: '#CCCCCC', color: '#B4162D'}} onClick={toggleColorMode}>
+                <Button mr={{base: '0px',md: '-20px'}} bg={'#CCCCCC'} _hover={{bg: '#CCCCCC', color: '#B4162D'}} onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
           <Button
@@ -93,20 +104,23 @@ export default function WithSubnavigation() {
             fontWeight={400}
             variant={'link'}
             color={'black'}
-          display={{ base: 'none', md: 'inline-flex' }}
-            href={'#'}>
+            display={{ base: 'none', md: 'inline-flex' }}
+          href={'https://www.github.com/'}>
             Github
           </Button>
           <Button
-            fontSize={'lg'}
+          as={'a'}
+          fontSize={'lg'}
+            display={{ base: 'none', md: 'inline-flex' }}
             fontWeight={600}
             color={'#CCCCCC'}
+            href={'https://www.piaic.org/'}
             bg={'#B4162D'}
-        //     href={'#'}
             _hover={{
               color:'#B4162D',
               bg: '#CCCCCC',
-            }}>
+            }}
+              >
             Register
           </Button>
         </Stack>
@@ -116,6 +130,7 @@ export default function WithSubnavigation() {
         <MobileNav />
       </Collapse>
     </Box>
+            </>
   );
 }
 
@@ -123,7 +138,7 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-
+  
   return (
     <Stack direction={'row'} spacing={4} minH={'72px'}>
       {NAV_ITEMS.map((navItem) => (
@@ -131,7 +146,7 @@ const DesktopNav = () => {
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Link
-                p={2}
+                p={1}
                 href={navItem.href ?? '#'}
                 fontSize={'lg'}
                 fontWeight={500}
@@ -147,16 +162,16 @@ const DesktopNav = () => {
 
             {navItem.children && (
               <PopoverContent
-                border={0}
-                boxShadow={'xl'}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={'xl'}
-                minW={'sm'}>
+              border={0}
+              boxShadow={'xl'}
+              bg={popoverContentBgColor}
+              p={4}
+              rounded={'xl'}
+              minW={'sm'}>
                 <Stack>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
-                  ))}
+                    ))}
                 </Stack>
               </PopoverContent>
             )}
@@ -170,7 +185,7 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <Link
-      href={href}
+    href={href}
       role={'group'}
       display={'block'}
       p={2}
@@ -180,7 +195,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
+            _groupHover={{ color: '#B4162D' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -204,19 +219,20 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
-      p={4}
-      display={{ md: 'none' }}>
+    bg={useColorModeValue('white', 'gray.800')}
+    mr={'0px'}
+    // p={}
+    display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
-      ))}
+        ))}
     </Stack>
   );
 };
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
-
+  
   return (
     <Stack spacing={4} onClick={children && onToggle}>
       <Flex
@@ -240,8 +256,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
             transform={isOpen ? 'rotate(180deg)' : ''}
             w={6}
             h={6}
-          />
-        )}
+            />
+            )}
       </Flex>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
@@ -274,29 +290,29 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home',
-//     children: [
-//       {
+    //     children: [
+      //       {
 //         label: 'Explore Design Work',
 //         subLabel: 'Trending Design to inspire you',
 //         href: '#',
 //       },
 //       {
-//         label: 'New & Noteworthy',
-//         subLabel: 'Up-and-coming Designers',
-//         href: '#',
-//       },
+  //         label: 'New & Noteworthy',
+  //         subLabel: 'Up-and-coming Designers',
+  //         href: '#',
+  //       },
 //     ],
-  },
+},
   {
     label: 'Courses',
     children: [
       {
-        label: 'Web 3 and Metaverse',
-        subLabel: 'Find your dream design job',
+        label: 'Core Courses (Common in All Specializations)',
+        subLabel: 'Learn more',
         href: '#',
       },
       {
-        label: 'Freelance Projects',
+        label: 'Specialized Tracks',
         subLabel: 'An exclusive list for contract work',
         href: '#',
       },
