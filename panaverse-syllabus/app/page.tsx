@@ -5,7 +5,7 @@ import  WithSubnavigation  from "../components/navbar";
 import  Body  from "../components/body";
 import  LargeWithNewsletter  from "../components/footer";
 import  Program  from "../components/program";
-
+import  Special  from "../components/special";
 
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
           <WithSubnavigation />
           <Body  />
           <Program />
+          <Special />
           <LargeWithNewsletter />
       </ChakraProvider>
     )

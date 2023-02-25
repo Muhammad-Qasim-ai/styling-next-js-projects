@@ -25,7 +25,8 @@ export default function Body() {
         />
       </Head>
       
-      <Flex maxW={'full'} borderBottom={'1px'} direction={{ base: 'column',md: 'column',lg:"row"}} mr={'0'}>
+      <Flex maxW={'full'} borderBottom={'1px'} direction={{ base: 'column',md: 'column',lg:"row"}} mr={'0'} 
+        >
         <Stack
           as={Box}
           ml={'20px'}
@@ -35,15 +36,16 @@ export default function Body() {
           spacing={{ base: 2, md: 4 }}
           py={{ base: 20, md: 40 }}
           // bgColor={'black'} 
+          
          >
             
           <Heading
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
-            Become A Certified Web 3.0 <br />
+            Launch Your Dev Career<br />
             <Text as={'span'} color={'#B4162D'}>
-            And Metaverse Developer
+            With Web 3 and Metaverse
             </Text>
           </Heading>
           <Text as={'span'} color={'gray.500'} mr={'250px'}>
