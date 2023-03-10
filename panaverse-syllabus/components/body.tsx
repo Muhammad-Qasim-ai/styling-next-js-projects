@@ -24,8 +24,11 @@ export default function Body() {
           rel="stylesheet"
         />
       </Head>
-      
+      {/* <Flex
+      backgroundImage={'url(/bg2.jpeg)'} backgroundRepeat={'no-repeat'}  h={'full'}
+      > */}
       <Flex maxW={'full'} borderBottom={'1px'} direction={{ base: 'column',md: 'column',lg:"row"}} mr={'0'} 
+        
         >
         <Stack
           as={Box}
@@ -48,7 +51,7 @@ export default function Body() {
             With Web 3 and Metaverse
             </Text>
           </Heading>
-          <Text as={'span'} color={'gray.500'} mr={'250px'}>
+          <Text as={'span'} color={'gray.500'} mr={'250px'} fontWeight={'bold'} fontSize={'xl'}>
           A One and Quarter Years Panaverse DAO Earn as you Learn Program
 Getting Ready for the Next Generation of the Internet
 Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics Technologies
@@ -94,6 +97,8 @@ Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Amb
                 />
               
       </Flex>
+
+      {/* </Flex> */}
 
 
     </>

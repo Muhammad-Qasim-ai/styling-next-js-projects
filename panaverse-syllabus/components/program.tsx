@@ -44,8 +44,9 @@ export default function Program() {
             Studies
             </Text>
             <br />
-            <Text as={'span'} fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }} >Core Courses</Text>
           </Heading>
+            <Heading as={'span'} fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }} py={'2rem'} fontWeight={600}
+            textAlign={'center'} >Core Courses</Heading>
           <Flex minH={'23rem'} direction={'row'} justifyContent={'center'} flexWrap={'wrap'}>
           {/* <Flex h={'50vh'} my={'10px'} border={'1px'} m={'0px'}>
           <Stack>
@@ -131,7 +132,7 @@ export default function Program() {
               color={'#B4162D'} 
               as={'span'} 
               textAlign={'center'} 
-              fontWeight={'medium'}> Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform</Text>
+              fontWeight={'medium'}> Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13</Text>
               <Text 
               // as={'a'}
               fontSize={'lg'} 
