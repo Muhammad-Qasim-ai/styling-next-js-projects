@@ -38,7 +38,7 @@ export default function Program() {
       <Stack
         as={Box}
         // w={'1000px'}
-
+        id={'special'}
         textAlign={"left"}
         spacing={{ base: 2, md: 4 }}
         py={{ base: 10, md: 20 }}

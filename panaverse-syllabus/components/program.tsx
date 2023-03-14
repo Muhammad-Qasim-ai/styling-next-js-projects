@@ -24,7 +24,9 @@ export default function Program() {
           rel="stylesheet"
         />
       </Head> */}
-      <Stack as={Box}
+      <Stack 
+      id={'main'}
+      as={Box}
           // w={'1000px'}
           
           textAlign={'left'}
@@ -46,7 +48,7 @@ export default function Program() {
             <br />
           </Heading>
             <Heading as={'span'} fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }} py={'2rem'} fontWeight={600}
-            textAlign={'center'} >Core Courses</Heading>
+            textAlign={'center'} >Core Courses (Common in All Specializations)</Heading>
           <Flex minH={'23rem'} direction={'row'} justifyContent={'center'} flexWrap={'wrap'}>
           {/* <Flex h={'50vh'} my={'10px'} border={'1px'} m={'0px'}>
           <Stack>

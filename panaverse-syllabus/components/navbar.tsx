@@ -106,7 +106,7 @@ export default function WithSubnavigation() {
             variant={'link'}
             color={'black'}
             display={{ base: 'none', md: 'inline-flex' }}
-          href={'https://www.github.com/'}>
+          href={'#main'}>
             Github
           </Button>
           <Button
@@ -310,12 +310,12 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Core Courses (Common in All Specializations)',
         subLabel: 'Learn more',
-        href: '#',
+        href: '#main',
       },
       {
         label: 'Specialized Tracks',
         subLabel: 'An exclusive list for contract work',
-        href: '#',
+        href: '#special',
       },
     ],
   },
