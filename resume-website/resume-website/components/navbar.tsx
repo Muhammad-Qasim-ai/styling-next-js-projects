@@ -77,28 +77,25 @@ function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
-      <nav className="w-full sticky top-0 font-mono" >
+      <nav className="w-full 2md:fixed top-0 font-mono shadow-xl" >
         <div className="justify-between px-4 md:items-baseline md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              {/* LOGO */}
+              
               <Link href="/">
                 <h2 className="text-2xl text-cyan-600 font-bold ">LOGO</h2>
               </Link>
-              {/* HAMBURGER BUTTON FOR MOBILE */}
+              
               <div className="md:hidden">
                 <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  className="p-2  rounded-md outline-none focus:border-gray-400 focus:border text-white"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <AiOutlineClose width={30} height={30}  />
+                    <AiOutlineClose className="w-7 h-7"  />
                   ) : (
                     <HiMenu
-                      
-                      width={30}
-                      height={30}
-                      className="focus:border-none active:border-none"
+                      className="focus:border-none active:border-none w-7 h-7"
                     />
                   )}
                 </button>
@@ -107,8 +104,8 @@ function NavBar() {
           </div>
           <div>
           <div
-              className={`flex-1 justify-self-center pb-0 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? 'p-12 md:p-0 block' : 'hidden'
+              className={`flex-1 relative justify-self-center pb-0 mt-8 md:block md:pb-0 md:mt-0 ${
+                navbar ? 'p-12 md:p-0 block ' : 'hidden'
               }`}
             >           
               <ul className="h-72 md:h-auto items-baseline justify-center md:flex ">
@@ -117,22 +114,22 @@ function NavBar() {
                   <span className="text-white">01.</span> About
                   </a>
                 </li>
-                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center ">
+                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center">
                   <a href="#blog" onClick={() => setNavbar(!navbar)}>
                   <span className="text-white">02.</span> Experience
                   </a>
                 </li>
-                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center ">
+                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center">
                   <a href="#contact" onClick={() => setNavbar(!navbar)}>
                   <span className="text-white">03.</span> Work
                   </a>
                 </li>
-                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center ">
+                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center">
                   <a href="#projects" onClick={() => setNavbar(!navbar)}>
                   <span className="text-white">04.</span> Contact
                   </a>
                 </li>
-                <button className="bg-navy border text-white rounded w-20 h-10 text-center md:mx-0 flex items-center justify-center mx-auto">
+                <button className="bg-navy border text-white rounded w-20 h-10 text-center md:mx-0 flex items-center justify-center mx-auto  transition-all delay-500">
                 Resume
               </button>
               </ul>
