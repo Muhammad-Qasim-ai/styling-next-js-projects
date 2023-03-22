@@ -77,14 +77,14 @@ function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
-      <nav className="w-full 2md:fixed top-0 font-mono shadow-xl" >
+      <nav  className="w-full  font-mono shadow-xl z-20 fixed top-0" >
         <div className="justify-between px-4 md:items-baseline md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               
-              <Link href="/">
-                <h2 className="text-2xl text-cyan-600 font-bold ">LOGO</h2>
-              </Link>
+              <a href="#home">
+                <h2 className="text-2xl text-cyan-600 font-bold ">QASIM</h2>
+              </a>
               
               <div className="md:hidden">
                 <button
@@ -109,27 +109,27 @@ function NavBar() {
               }`}
             >           
               <ul className="h-72 md:h-auto items-baseline justify-center md:flex ">
-                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center">
+                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center nav1">
                   <a href="#about" onClick={() => setNavbar(!navbar)}>
                   <span className="text-white">01.</span> About
                   </a>
                 </li>
-                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center">
+                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center nav2">
                   <a href="#blog" onClick={() => setNavbar(!navbar)}>
                   <span className="text-white">02.</span> Experience
                   </a>
                 </li>
-                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center">
+                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center nav3">
                   <a href="#contact" onClick={() => setNavbar(!navbar)}>
                   <span className="text-white">03.</span> Work
                   </a>
                 </li>
-                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center">
+                <li className="pb-6 text-sm text-lightest-slate py-2 md:px-6 text-center nav4">
                   <a href="#projects" onClick={() => setNavbar(!navbar)}>
                   <span className="text-white">04.</span> Contact
                   </a>
                 </li>
-                <button className="bg-navy border text-white rounded w-20 h-10 text-center md:mx-0 flex items-center justify-center mx-auto  transition-all delay-500">
+                <button className="bg-navy border text-white rounded w-20 h-10 text-center md:mx-0 flex items-center justify-center mx-auto  2md:nav5">
                 Resume
               </button>
               </ul>

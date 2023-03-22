@@ -6,3 +6,212 @@
     background-color: #0a192f;
     scroll-behavior: smooth;
 }
+
+.nav1{
+    animation: slide1 0.3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide1 {
+    from{
+        transform: translateY(-300px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+.nav2{
+    animation: slide2 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide2 {
+    from{
+        transform: translateY(-300px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+.nav3{
+    animation: slide3 0.7s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide3 {
+    from{
+        transform: translateY(-300px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+.nav4{
+    animation: slide4 0.9s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide4 {
+    from{
+        transform: translateY(-300px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+.nav5{
+    animation: slide5 1.1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide5 {
+    from{
+        transform: translateY(-300px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+
+.main1{
+    animation: slide6 0.3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide6 {
+    from{
+        transform: translateY(80px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: transparent;
+    }
+  }
+.main2{
+    animation: slide7 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide7 {
+    from{
+        transform: translateY(80px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: transparent;
+    }
+  }
+.main3{
+    animation: slide8 0.7s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide8 {
+    from{
+        transform: translateY(80px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: transparent;
+    }
+  }
+.main4{
+    animation: slide9 0.9s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide9 {
+    from{
+        transform: translateY(80px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: transparent;
+    }
+  }
+.main5{
+    animation: slide10 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide10 {
+    from{
+        transform: translateY(80px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: transparent;
+    }
+  }
+.main6{
+    animation: slide11 1.2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide11 {
+    from{
+        transform: translateY(80px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: transparent;
+    }
+  }
+.main7{
+    animation: slide12 1.1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide12 {
+    from{
+        transform: translateY(80px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: transparent;
+    }
+  }
+.main8{
+    animation: slide13 1.1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide13 {
+    from{
+        transform: translateY(80px);
+        opacity: 0.01;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: transparent;
+    }
+  }
+
+
+  
+  
