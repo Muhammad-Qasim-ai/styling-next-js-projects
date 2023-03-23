@@ -129,7 +129,7 @@ function NavBar() {
                   <span className="text-white">04.</span> Contact
                   </a>
                 </li>
-                <button className="bg-navy border text-white rounded w-20 h-10 text-center md:mx-0 flex items-center justify-center mx-auto  2md:nav5">
+                <button className="bg-navy border text-white rounded w-20 h-10 text-center md:mx-0 flex items-center justify-center mx-auto nav5">
                 Resume
               </button>
               </ul>

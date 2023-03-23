@@ -211,7 +211,46 @@
         background-color: transparent;
     }
   }
+  .social{
+    animation: slide14 1.1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide14 {
+    from{
+      
+      opacity: 0.01;
+    }
+    to{
+        
+        opacity: 1;
+        background-color: transparent;
+    }
+  }
+
+  .about{
+      animation: slide15 1.1s;
+      animation-fill-mode: forwards;
+    }
+    
+    @keyframes slide15 {
+      from{
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 20, 0, 1);
+          opacity: 0.01;
+      }
+      to{
+          transform: translateY(0px);
+          opacity: 1;
+          background-color: transparent;
+      }
+    }
+    
 
 
+
+
+
+
+    
   
   

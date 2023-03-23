@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function About() {
   return (
     <>
-      <div id="about" className=" border opacity-0 mb-52"></div>
-      <div   className="  flex justify-center h-1/3 2md:mb-96">
+      <div id="about" className=" border opacity-0 mb-52 "></div>
+      <div   className="  flex justify-center h-1/3 2md:mb-96 about">
         <div className=" 2md:max-w-4.5xl flex flex-col justify-left w-screen 2md:mx-0  mx-9">
           <div className=" flex w-full flex-row items-center my-auto mb-5 mt-2">
-            <span  className=" text-lightest-slate text-2xl font-semibold">
+            <span  className=" text-lightest-slate sm:text-2xl font-semibold text-xl">
               <span  className="font-mono text-white font-thin">01.</span> About
               Me
             </span>
