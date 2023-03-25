@@ -1,20 +1,38 @@
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
 export default function About() {
+  const introHeaderVariants: Variants = {
+    hide: {
+        opacity: 0,
+        y: 50,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 2,
+        },
+    },
+};
   return (
     <>
-      <div id="about" className=" border opacity-0 mb-52 "></div>
-      <div   className="  flex justify-center h-1/3 2md:mb-96 about">
+      <div id="about" className=" border opacity-1 mb-28 "></div>
+      <motion.div   className="  flex justify-center h-1/3 mb-14 " 
+                    initial="hide"
+                    whileInView="show"
+                    exit="hide"
+                    variants={introHeaderVariants}>
         <div className=" 2md:max-w-4.5xl flex flex-col justify-left w-screen 2md:mx-0  mx-9">
           <div className=" flex w-full flex-row items-center my-auto mb-5 mt-2">
             <span  className=" text-lightest-slate sm:text-2xl font-semibold text-xl">
               <span  className="font-mono text-white font-thin">01.</span> About
               Me
             </span>
-            <div className=" w-4/12  h-0 flex mx-5 border-lightest-navy border border-t-0"></div>
+            <div className=" w-4/12  h-0 mx-5 border-lightest-navy border border-t-0  sm:flex hidden"></div>
           </div>
           <div className="  lg:grid lg:grid-cols-14 lg:gap-12 block">
-            <div className="mt-14  ">
+            <div className="mt-1  ">
               <p className=" text-lightest-slate static">
                 Hello! My name is Muhammad Qasim and I enjoy creating things
                 that live on the internet. My interest in web development
@@ -61,7 +79,7 @@ export default function About() {
             
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -1,24 +1,68 @@
 import Image from "next/image";
 import { TfiNewWindow } from "react-icons/tfi";
+import { motion, Variants } from "framer-motion";
 import { FiGithub, FiTwitter } from "react-icons/fi";
 
 
 export default function About() {
-  const progress = 75
+  
+  const introHeaderVariants: Variants = {
+    hide: {
+        opacity: 0,
+        y: 50,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+        },
+    },
+};
+  const introHeaderVariants2: Variants = {
+    hide: {
+        opacity: 0,
+        y: 50,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            delay: 0.5,
+        },
+    },
+};
+  const introHeaderVariants3: Variants = {
+    hide: {
+        opacity: 0,
+        y: 50,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            delay: 1,
+        },
+    },
+};
   return (
     
     <>
-    <div id="contact" className=" border opacity-0 mb-40"></div>
-      <div   className="  flex justify-center h-1/3 mt-28">
+    <div id="contact" className=" border opacity-1 mb-1"></div>
+      <div   className="  flex justify-center h-1/3 sm:mt-20 mt-16">
         <div className=" 2md:max-w-4xl flex flex-col justify-left w-screen 2md:mx-0  mx-9">
           <div className=" flex w-full flex-row items-center my-auto mb-5 mt-2">
             <span  className=" text-lightest-slate text-2xl font-semibold">
               <span  className="font-mono text-white font-thin">03.</span> Some Things I've Built
-              Me
             </span>
-            <div className=" w-4/12  h-0 flex mx-5 border-lightest-navy border border-t-0"></div>
+            <div className=" w-4/12  h-0 mx-5 border-lightest-navy border border-t-0 sm:flex hidden"></div>
           </div>
-            <div className="flex text-right mx-auto w-full">
+            <motion.div className="flex text-right mx-auto w-full mt-5" initial="hide"
+          whileInView="show"
+          exit="hide"
+          variants={introHeaderVariants}>
              
                 
                 <Image 
@@ -44,13 +88,16 @@ export default function About() {
                         
                     </ul>
                     <div className="flex justify-end px-5 items-center  bg-transparent mt-2">
-                    <a href="https://github.com/Muhammad-Qasim-ai?tab=repositories bg-transparent"><FiGithub className=" text-lightest-slate w-6 h-6 bg-transparent "/></a>
-                    <a href="https://panaverse-syllabus-qasimrafiq2019-gmailcom.vercel.app/ bg-transparent"><TfiNewWindow className=" text-light-slate w-6 h-7 mx-2 mb-2 bg-transparent" /></a>
+                    <a href="https://github.com/Muhammad-Qasim-ai?tab=repositories "  className="bg-transparent"><FiGithub className=" text-lightest-slate w-6 h-6 bg-transparent "/></a>
+                    <a href="https://panaverse-syllabus-qasimrafiq2019-gmailcom.vercel.app/ " className="bg-transparent"><TfiNewWindow className=" text-light-slate w-6 h-7 mx-2 mb-2 bg-transparent" /></a>
                     </div>
                 </div>
                 
-            </div>
-            <div className="flex text-left mx-auto w-full mt-20">
+            </motion.div>
+            <motion.div initial="hide"
+          whileInView="show"
+          exit="hide"
+          variants={introHeaderVariants2} className="flex text-left mx-auto w-full mt-20 ">
              
                 
                 
@@ -81,8 +128,11 @@ export default function About() {
                           height={'64'} alt={"panaverse"} 
                           className={'w-8/12 2md:block hidden 2md:h-72 h-62 saturate-50 hover:saturate-100 rounded-xl'}               
                 />
-            </div>
-            <div className="flex text-right mx-auto w-full mt-20">
+            </motion.div>
+            <motion.div initial="hide"
+          whileInView="show"
+          exit="hide"
+          variants={introHeaderVariants3} className="flex text-right mx-auto w-full mt-20 ">
              
                 
                 <Image 
@@ -108,12 +158,12 @@ export default function About() {
                         
                     </ul>
                     <div className="flex justify-end px-5 items-center  bg-transparent mt-2">
-                    <a href="https://github.com/Muhammad-Qasim-ai?tab=repositories bg-transparent"><FiGithub className=" text-lightest-slate w-6 h-6 bg-transparent "/></a>
-                    <a href="https://panaverse-syllabus-qasimrafiq2019-gmailcom.vercel.app/ bg-transparent"><TfiNewWindow className=" text-light-slate w-6 h-7 mx-2 mb-2 bg-transparent" /></a>
+                    <a href="https://github.com/Muhammad-Qasim-ai?tab=repositories" className="bg-transparent"><FiGithub className=" text-lightest-slate w-6 h-6 bg-transparent "/></a>
+                    <a href="https://panaverse-syllabus-qasimrafiq2019-gmailcom.vercel.app/" className="bg-transparent"><TfiNewWindow className=" text-light-slate w-6 h-7 mx-2 mb-2 bg-transparent" /></a>
                     </div>
                 </div>
                 
-            </div>
+            </motion.div>
             
         </div>
       </div>

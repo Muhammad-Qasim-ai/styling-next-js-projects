@@ -1,6 +1,20 @@
 import { useState } from "react";
+import { motion, Variants } from "framer-motion";
 
 export default function Exp(){
+  const introHeaderVariants: Variants = {
+    hide: {
+        opacity: 0,
+        y: 50,
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+        },
+    },
+};
     const exp = 'Not any'
     const expdesc = {
       head: 'Lorem ipsum 1',
@@ -41,27 +55,32 @@ export default function Exp(){
 
     return(
         <>
-        <div id="blog" className="  opacity-0  mb-40"></div>
-        <div  className="  flex justify-center h-1/3 mt-28 2md:ml-36 2md:my-96">
+        <div id="blog" className="  opacity-1 border"></div>
+        <motion.div  className="  flex justify-center h-1/3 2md:ml-36 2md:my-80" 
+          initial="hide"
+          whileInView="show"
+          exit="hide"
+          variants={introHeaderVariants}
+        >
         <div className=" 2md:max-w-4.5xl flex flex-col sm:justify-left w-screen 2md:mx-0  mx-9  ">
           <div className=" flex w-full flex-row items-center my-auto mb-5 mt-2 justify-center ">
-            <span  className=" text-lightest-slate text-2xl font-semibold">
+            <span  className=" text-lightest-slate sm:text-2xl font-semibold text-lg">
               <span  className="font-mono text-white font-thin">02.</span> Where I've Worked
               
             </span>
-            <div className=" w-4/12  h-0 flex mx-5 border-lightest-navy border-t-0"></div>
+            <div className=" w-4/12  h-0 flex mx-5 border-lightest-navy border-t-1"></div>
           </div>
           <div className="flex sm:flex-row flex-col">
 
           <div className="flex sm:w-2/12 sm:flex-col sm:border-l-2 border-lightest-navy sm:border-t-0 border-t-2 w-full sm:justify-start justify-between">
-                <button className={`text-left text-slate pl-4 font-mono hover:text-white hover:bg-light-navy sm:py-2 px-2 2md:focus:border-l-2 focus:border-t-2`}  onClick={() => setTab(expdesc)}>
+                <button className={`text-left text-slate pl-4 font-mono hover:text-white hover:bg-light-navy sm:py-2 px-2 2md:focus:border-l-2 2md:focus:border-t-0 focus:border-t-2`}  onClick={() => setTab(expdesc)}>
                   {exp}
                   </button>
-                <button className={`text-left text-slate pl-4 font-mono hover:text-white hover:bg-light-navy sm:py-2  px-2 2md:focus:border-l-2 focus:border-t-2`}  onClick={() => setTab(expdesc2)}>
+                <button className={`text-left text-slate pl-4 font-mono hover:text-white hover:bg-light-navy sm:py-2  px-2 2md:focus:border-l-2 focus:border-t-2 2md:focus:border-t-0 `}  onClick={() => setTab(expdesc2)}>
                   Not any</button>
-                <button className={`text-left text-slate pl-4 font-mono hover:text-white hover:bg-light-navy sm:py-2 px-2 2md:focus:border-l-2 focus:border-t-2`}  onClick={() => setTab(expdesc3)}>
+                <button className={`text-left text-slate pl-4 font-mono hover:text-white hover:bg-light-navy sm:py-2 px-2 2md:focus:border-l-2 focus:border-t-2 2md:focus:border-t-0 `}  onClick={() => setTab(expdesc3)}>
                   Not any</button>
-                <button className={`text-left text-slate pl-4 font-mono hover:text-white hover:bg-light-navy sm:py-2  px-2 2md:focus:border-l-2 focus:border-t-2` }  onClick={() => setTab(expdesc4)}>
+                <button className={`text-left text-slate pl-4 font-mono hover:text-white hover:bg-light-navy sm:py-2  px-2 2md:focus:border-l-2 focus:border-t-2 2md:focus:border-t-0 ` }  onClick={() => setTab(expdesc4)}>
                   Not any</button>
                 
                 
@@ -75,7 +94,7 @@ export default function Exp(){
           </div>
           </div>
         </div>
-      </div>
+      </motion.div>
         </>
     )
 }
