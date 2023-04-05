@@ -24,9 +24,8 @@ export default function Body() {
           rel="stylesheet"
         />
       </Head>
-      {/* <Flex
-      backgroundImage={'url(/bg2.jpeg)'} backgroundRepeat={'no-repeat'}  h={'full'}
-      > */}
+      <Flex>
+      
       <Flex maxW={'full'} borderBottom={'1px'} direction={{ base: 'column',md: 'column',lg:"row"}} mr={'0'} 
         
         >
@@ -98,7 +97,7 @@ Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Amb
               
       </Flex>
 
-      {/* </Flex> */}
+      </Flex>
 
 
     </>

@@ -8,8 +8,8 @@ import { MdOutlineLocationOn } from "react-icons/md";
 export default function Main(){
     return(
         <>
-        <div id="home" className="border w-96 z-30 opacity-0"></div>
-        <div className=" flex justify-center h-auto 2md:mt-80 mt-28 lg:mx-auto mx-9 2md:mb-96 bg-transparent">
+        <div id="home" className="border w-96 z-30 opacity-0 "></div>
+        <div className=" flex justify-center h-auto 2md:mt-80 mt-28 lg:mx-auto mx-9 2md:mb-96 bg-color2">
         <div className=" w-full lg:w-8/12 flex flex-col justify-left ">
             <span className=" text-white font-mono h-6 w-auto main1 bg-transparent delay-75">Hi, my name is</span>
             <span className=" text-lightest-slate text-5xl sm:text-7xl mt-4 font-semibold main2 delay-100">Muhammad Qasim;</span>

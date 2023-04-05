@@ -16,13 +16,7 @@ export default function Page() {
   return (
     <>
     <Navbar />
-    <Main />
-    <About />
-    <Exp />
-    <Work />
-    <Work2 />
-    <Contact />
-    <Social />
+    {/* <Main /> */}
     </>
   )
 }

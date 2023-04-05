@@ -22,7 +22,7 @@ export default function About() {
   return (
     <>
       <div id="about" className=" border opacity-0 mb-28 "></div>
-      <motion.div   className="  flex justify-center h-1/3 mb-14 " 
+      <motion.div   className="  flex justify-center h-1/3 mb-14 bg-color2 " 
                     initial="hide"
                     whileInView="show"
                     exit="hide"
