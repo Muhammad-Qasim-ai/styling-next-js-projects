@@ -21,7 +21,10 @@ module.exports = {
         'color1': '#2B3467',
         "color2": '#BAD7E9',
         "color3": '#FCFFE7',
-        "color4": '#DBEDF3'
+        "color4": '#DBEDF3',
+        "color5": '#B4162D',
+        "color6": '#CCCCCC',
+        
 
       },
       width: {
@@ -29,7 +32,7 @@ module.exports = {
         '110': '650px',
         '111': '75%',
         '85': '18.75rem',
-        '3.5/12': '30%'
+        '0.5/12': '7.3%'
       },
       height: {
         '68': '17rem',
@@ -41,13 +44,8 @@ module.exports = {
         '4.5xl': '56.25rem',
         '4.6xl': '48.40rem',
         '2sm': '24.375rem',
-        '3sm': '75%'
-      },
-      maxWidth: {
-        '4.5xl': '56.25rem',
-        '4.6xl': '48.40rem',
-        '2sm': '24.375rem',
-        '3sm': '75%'
+        '3sm': '75%',
+        '2xs': '4rem'
       },
       gridTemplateColumns: {
         '14': '3fr 2fr',
@@ -61,7 +59,7 @@ module.exports = {
         '--transition' : 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)'
       },
       backgroundImage: {
-        'panaverse' : 'url(/panaverse2.avif)',
+        'bg1' : 'url(/bg1.jpg)',
         'panaverse2' : 'url(/panaverse3.avif)',
         'pricingui' : 'url(/pricingui2.avif)',
       },

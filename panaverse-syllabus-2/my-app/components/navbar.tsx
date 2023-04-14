@@ -2,11 +2,14 @@
 
 // import React, { useState } from "react";
 import { HiMenu } from "react-icons/hi";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineArrowDown, AiOutlineClose } from "react-icons/ai";
+import { RxOpenInNewWindow} from "react-icons/rx"
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { TfiNewWindow } from "react-icons/tfi";
 
 
 
@@ -60,7 +63,7 @@ import { useState } from "react";
 // const NavbarButton = () => {
 //   const [showDropdown, setShowDropdown] = useState(false);
 
-//   const toggleDropdown = () => setShowDropdown(prev => !prev);
+  // const toggleDropdown = () => setShowDropdown(prev => !prev);
 
 //   return (
 //     <div className="relative">
@@ -102,85 +105,160 @@ import { useState } from "react";
 
 // export default NavbarButton;
 
+// const MenuButton = () => {
+//   const navItems = {
+//     Label: 'Core Courses',
+//     subLabel: 'Learn more'   ,
+//     Label2: 'Specialized Track',
+//     subLabel2: 'An exclusive list for contract work'
+// }
+//   const [isOpen, setIsOpen] = useState(false);
+ 
+
+    
+
+//     return(
+//         <>
+//           <div className=" w-full h-18">
+//               <button
+//               onMouseEnter={toggleDropdown}
+//               onMouseLeave={toggleDropdown}
+              
+             
+//               >
+//                 Menu
+//               </button>
+//               <div
+//               onMouseEnter={toggleDropdown}
+//               onMouseLeave={toggleDropdown}
+//               >
+//                 {showDropdown && (
+//                    <div className=" flex flex-col border w-2/12 h-32 p-2 rounded-lg abosolute ">
+//                         <a href="#" className="border h-3/5 flex flex-col pl-2 hover:bg-gray-300">
+//                           {navItems.Label}
+//                           <a href="" className=" text-xs">{navItems.subLabel}</a>
+//                         </a>
+//                         <a href="#" className="border h-3/5 flex flex-col pl-2">
+//                           {navItems.Label}
+//                           <a href="" className=" text-xs">{navItems.subLabel}</a>
+//                         </a>
+//                    </div>
+//                 )}
+//               </div>
+//           </div>
+//         </>
+//     )
+// } 
 
 
-// import React, { useState } from "react";
-import {  HiX } from "react-icons/hi";
-import { BsChevronDown } from "react-icons/bs";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
 
-  const dropdownClass = isOpen ? "block" : "hidden";
+  const navItems = {
+       Label: 'Core Courses',
+       subLabel: 'Learn more'   ,
+       Label2: 'Specialized Track',
+       subLabel2: 'An exclusive list for contract work'
+    }
 
-  return (
-    <nav className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <span className="text-2xl font-bold">Logo</span>
+
+  const [showDropdown, setShowDropdown] = useState(false);
+
+
+  const toggleDropdown = () => setShowDropdown(prev => !prev)
+
+
+  return(
+    <>
+    <div className="hidden w-full h-24 shadow-2lg rounded-2md  2md:flex  items-center fixed">
+      <img src={"/logo.jpg"} alt={""} className="w-42 h-20 ml-10"></img>
+      
+        <ul className="flex  justify-between w-80 lg:w-80 h-24 text-lg items-center text-black font-normal ml-10">
+          
+          <li className="max-w-2xs max-h-7">
+            <button onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>Courses</button> 
+            <div onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+              {showDropdown && (
+                <div className=" flex flex-col  w-96 h-32 p-2 rounded-lg relative z-10 top-2 bg-white text-black shadow-2lg">
+                        <a href="#" className=" h-3/5 flex flex-col pl-2 hover:bg-gray-300 rounded-lg ">
+                          {navItems.Label}
+                          <a href="" className=" text-xs">{navItems.subLabel}</a>
+                        </a>
+                        <a href="#" className=" h-3/5 flex flex-col pl-2">
+                          {navItems.Label}
+                          <a href="" className=" text-xs">{navItems.subLabel}</a>
+                        </a>
+                   </div>
+              )}
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
-                  Home
-                </a>
+            
+          </li>
+          <li>Commmuntiy</li>
+          <li>About Us</li>
+          </ul>
+          <div className="flex justify-between sm:w-36 mr-3 absolute right-10 items-center"> 
+         <a className=" text-lg sm:block hidden mr-4 md:flex items-center">Github <RxOpenInNewWindow className="ml-1" /> </a>
+         <button className=" bg-color5 text-white rounded-lg p-2 px-3 text-lg ">Register</button>
+      </div>
+    </div>
+    <MobileNav />
+    </>
+  )
+}
 
-                <div className="relative">
-                  <button onClick={toggleNavbar} className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
-                    <span>Dropdown</span>
-                    <BsChevronDown className="ml-1 inline-block" />
-                  </button>
-                  <div className={`${dropdownClass} absolute z-50 bg-gray-800 text-white right-0 mt-2 py-2 w-48 rounded-md shadow-lg`}>
-                    <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                      Link 1
-                    </a>
-                    <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                      Link 2
-                    </a>
-                    <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                      Link 3
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+const MobileNav = () => {
 
-          <div className="-mr-2 flex md:hidden">
-            <button onClick={toggleNavbar} className="hover:bg-gray-700 inline-flex items-center justify-center p-2 rounded-md text-gray-400">
-              {isOpen ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
+const [navbar, setnavbar] = useState(false)
+const [showDropdown2, setShowDropdown2] = useState(false)
+
+  return(
+    <>
+    
+      <div className="2md:hidden flex  h-24 bg-white w-full shadow-2lg rounded-2md justify-between items-center ">
+        <button className="ml-4 my-auto" onClick={() => setnavbar(!navbar)}>
+          {navbar ? (
+            <AiOutlineClose className="sm:w-10 sm:h-10 w-8 h-8 " />
+          ) : (
+
+          <HiMenu className="sm:w-10 sm:h-10 w-8 h-8"/>
+          )}
+
+        </button>
+        <img src="./logos/red.png" alt="" className=" w-42 h-20 my-auto" />
+      <div className="flex justify-between sm:w-36 mr-2 sm:mr-11"> 
+      <a className=" text-lg  hidden mr-4 sm:flex items-center">Github <RxOpenInNewWindow className="ml-1" /> </a>
+         <button className=" bg-black rounded-lg p-2 sm:px-3 text-lg text-white ">Register</button>
+      </div>
+      
+        
+      
+      </div>
+      {navbar && (
+      <div className="h-auto bg-color3 text-lg shadow-2lg rounded-sm -mt-3">
+          <ul>
+            <li className="my-2">Home</li>
+
+            <button className="flex justify-between items-center w-full my-2" onClick={()=> setShowDropdown2(!showDropdown2)}>
+             Courses
+              <AiOutlineArrowDown className={`h-4 w-4  ${showDropdown2 && 'rotate-180'}`} />
             </button>
-          </div>
-        </div>
+              {showDropdown2 && (
+                <div className={`h-auto w-full flex flex-col ml-4`}>
+                    <a href="#">Core Courses</a>
+                    <a href="#">Specialized Tracks</a>
+                </div>
+              )}
+
+            <li className="my-2">Community</li>
+            <li className="my-2">About</li>
+          </ul>
       </div>
-
-      <div className={`${dropdownClass} md:hidden bg-gray-800 text-white`}>
-        <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
-          Home
-        </a>
-        <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
-          Link 1
-        </a>
-        <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
-          Link 2
-        </a>
-        <a href="#" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
-          Link 3
-        </a>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+    )}
+      
+    </>
+  )
+}
 
 
-
-
-
+export default Navbar
