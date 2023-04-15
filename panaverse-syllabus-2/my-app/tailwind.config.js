@@ -45,7 +45,8 @@ module.exports = {
         '4.6xl': '48.40rem',
         '2sm': '24.375rem',
         '3sm': '75%',
-        '2xs': '4rem'
+        '2xs': '4rem',
+        '5/12': '41.666667%'
       },
       gridTemplateColumns: {
         '14': '3fr 2fr',
