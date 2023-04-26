@@ -29,7 +29,11 @@ module.exports = {
       },
       width: {
         '6.5/12': '56.6666%',
-        '110': '650px',
+        '110': '30rem',
+        '112': '35rem',
+        '113': '40rem',
+        '103': '1000px',
+        '102': '25rem',
         '111': '75%',
         '85': '18.75rem',
         '0.5/12': '7.3%'
@@ -38,7 +42,8 @@ module.exports = {
         '68': '17rem',
         '85': '18.75rem',
         '17': '72px',
-        '18': '88px'
+        '18': '88px',
+        '110': '30rem',
       },
       maxWidth: {
         '4.5xl': '56.25rem',
@@ -46,7 +51,13 @@ module.exports = {
         '2sm': '24.375rem',
         '3sm': '75%',
         '2xs': '4rem',
-        '5/12': '41.666667%'
+        '5/12': '46%',
+        '10/12': '83.333333%',
+        '110': '30rem'
+      },
+      minWidth:{
+        '105': '28rem',
+        '110': '30rem'
       },
       gridTemplateColumns: {
         '14': '3fr 2fr',
@@ -54,13 +65,16 @@ module.exports = {
       },
       screens: {
         '2md': '800px',
+        '3md': '620px',
         '2lg': '1200px',
+        '1lg': '1030px',
+        '2sm': '330px',
       },
       transitionProperty: {
         '--transition' : 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)'
       },
       backgroundImage: {
-        'bg1' : 'url(/bg1.jpg)',
+        'bg2' : 'url(/meta5.png)',
         'panaverse2' : 'url(/panaverse3.avif)',
         'pricingui' : 'url(/pricingui2.avif)',
       },

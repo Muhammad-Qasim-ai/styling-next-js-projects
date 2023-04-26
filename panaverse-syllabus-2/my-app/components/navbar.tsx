@@ -31,10 +31,12 @@ const Navbar = () => {
 
   return(
     <>
-    <div className=" w-full shadow-2lg rounded-2md flex justify-center">
+    <div className="hidden w-full shadow-2lg rounded-2md 2md:flex justify-center h-24 fixed z-10 bg-color4  border">
 
-    <div className="hidden lg:w-10/12 2md:w-full h-24  2md:flex  items-center fixed">
-      <img src={"/logo.jpg"} alt={""} className="w-42 h-20 ml-10"></img>
+    <div className="hidden lg:w-10/12 2md:w-full h-24  2md:flex  items-center  justify-between">
+      <div className="flex">
+
+      <Image width={140} height={'2'} src={"/logo.jpg"} alt={""} className="w-42 h-20 ml-10 mt-2" />
       
         <ul className="flex  justify-between w-80 lg:w-80 h-24 text-lg items-center text-black font-normal ml-10">
           
@@ -59,7 +61,9 @@ const Navbar = () => {
           <li>Commmuntiy</li>
           <li>About Us</li>
           </ul>
-          <div className="flex justify-between sm:w-36 mr-3 absolute right-10 items-center"> 
+      </div>
+
+          <div className="flex justify-between sm:w-36 mr-14   items-center"> 
          <a className=" text-lg sm:block hidden mr-4 md:flex items-center">Github <RxOpenInNewWindow className="ml-1" /> </a>
          <button className=" bg-color5 text-white rounded-lg p-2 px-3 text-lg ">Register</button>
       </div>
@@ -77,8 +81,8 @@ const [showDropdown2, setShowDropdown2] = useState(false)
 
   return(
     <>
-    
-      <div className="2md:hidden flex  h-24 bg-white w-full shadow-2lg rounded-2md justify-between items-center ">
+
+      <div className="2md:hidden flex  h-24 bg-color4  z-10 w-full shadow-2lg rounded-2md justify-between items-center fixed ">
         <button className="ml-4 my-auto" onClick={() => setnavbar(!navbar)}>
           {navbar ? (
             <AiOutlineClose className="sm:w-10 sm:h-10 w-8 h-8 " />
@@ -88,7 +92,7 @@ const [showDropdown2, setShowDropdown2] = useState(false)
           )}
 
         </button>
-        <img src="./logos/red.png" alt="" className=" w-42 h-20 my-auto" />
+        <Image width={'110'} height={'2'} src="/logos/red.png" alt="" className=" w-42 h-20 my-auto" />
       <div className="flex justify-between sm:w-36 mr-2 sm:mr-11"> 
       <a className=" text-lg  hidden mr-4 sm:flex items-center">Github <RxOpenInNewWindow className="ml-1" /> </a>
          <button className=" bg-black rounded-lg p-2 sm:px-3 text-lg text-white ">Register</button>
@@ -98,9 +102,9 @@ const [showDropdown2, setShowDropdown2] = useState(false)
       
       </div>
       {navbar && (
-      <div className="h-auto bg-color3 text-lg shadow-2lg rounded-sm -mt-3">
+      <div className="h-auto bg-color3 text-lg shadow-2lg rounded-sm -mt-3 fixed w-full z-10 top-24">
           <ul>
-            <li className="my-2">Home</li>
+            
 
             <button className="flex justify-between items-center w-full my-2" onClick={()=> setShowDropdown2(!showDropdown2)}>
              Courses
@@ -108,13 +112,13 @@ const [showDropdown2, setShowDropdown2] = useState(false)
             </button>
               {showDropdown2 && (
                 <div className={`h-auto w-full flex flex-col ml-4`}>
-                    <a href="#">Core Courses</a>
-                    <a href="#">Specialized Tracks</a>
+                    <a href="#" onClick={() => setnavbar(!navbar)} >Core Courses</a>
+                    <a href="#" onClick={() => setnavbar(!navbar)} >Specialized Tracks</a>
                 </div>
               )}
 
-            <li className="my-2">Community</li>
-            <li className="my-2">About</li>
+            <li className="my-2"><button onClick={() => setnavbar(!navbar)}>Community</button></li>
+            <li className="my-2"><button onClick={() => setnavbar(!navbar)}>About</button></li>
           </ul>
       </div>
     )}
