@@ -60,56 +60,58 @@ export default function Special() {
     return(
 
         <>
-        <div className="w-full flex  mt-24   border-black justify-center mb-20">
-        <div className="    border-black w-full  xl:max-w-10/12 2md:mx-0 mx-auto">
-            <div className="ml-10  border-black w-full">
+        <div className="w-full flex  mt-24  border-black justify-center mb-20">
+        <div className="   border-black w-full  xl:max-w-10/12 2md:mx-0 mx-auto">
+            <div className="mx-auto border-black w-11/12">
 
-            <h1 className="text-4xl bold mb-20">Specialized Tracks</h1>
+            <h1 className="text-5xl font-bold mb-4 ">Specialized Tracks</h1>
+            <p className="text-color1 mb-16 text-xl font-medium">After completing the first three quarters the participants will select one or more specializations consisting of two courses each.</p>
             <div className="flex 2md:flex-row flex-col mt-2 2md:h-110 ">
 
-                <div className=" max-w-110 min-w-105  space-y-4 overflow-y-scroll shadow-md rounded-md border">
-                    <button className={`py-2 flex cursor-pointer focus:bg-color2 focus:border-l-2 rounded-lg`} onClick={() => setTab(web3)}>
-                        <Image width={'250'} height={'2'}  src="/meta7.png" alt="" className={` w-44 h-24 rounded-lg ${web3 ? 'border-2 border-black' : 'border-0'}`} />
+                <div className="  border-black flex 2md:flex-col flex-row  1lg:w-128 2md:w-110 w-full   space-y-4 overflow-y-scroll shadow-md rounded-md 2md:space-x-0 space-x-6 transition-shadow">
+                    
+                    <button className={`shadow-sm py-2 flex 2md:flex-row flex-col cursor-pointer focus:bg-color2  rounded-lg  border mt-4 2md:w-full min-w-96  items-center`} onClick={() => setTab(web3)}>
+                        <Image width={'500'} height={'2'}  src="/meta7.png" alt="" className={` ml-2 hover:saturate-200  w-44 max-w-96 2md:max-w-full h-24 rounded-lg `} />
                         
 
-                        <h1 className="ml-2 text-xl font-bold my-auto">Web 3.0 <span className="text-color5">(Blockchain)</span> and <span className="text-color5">Metaverse </span> Specialization</h1>
+                        <h1 className="ml-0 2md:ml-2 text-xl font-bold my-auto">Web 3.0 <span className="text-color5">(Blockchain)</span> and <span className="text-color5">Metaverse </span> Specialization</h1>
                         
                         
                     </button>
-                    <button className="py-2 flex cursor-pointer focus:bg-color2  rounded-lg" onClick={() => setTab(ai)}>
-                        <Image width={'250'} height={'2'}  src="/ai.jpg" alt="" className=" w-44 h-24 rounded-lg" />
+                    <button className="shadow-sm py-2 flex 2md:flex-row flex-col cursor-pointer focus:bg-color2  rounded-lg  border mt-4 2md:w-full min-w-96  items-center" onClick={() => setTab(ai)}>
+                        <Image width={'250'} height={'2'}  src="/ai.jpg" alt="" className="ml-2 hover:saturate-200 w-44 h-24 rounded-lg" />
                         
 
                         <h1 className="ml-2 text-xl font-bold  my-auto">Artificial Intelligence <span className="text-color5">(AI)</span> and Deep Learning Specialization</h1>
                         
                         
                     </button>
-                    <button className="py-2 flex cursor-pointer focus:bg-color2 rounded-lg" onClick={() => setTab(cc)}>
-                        <Image width={'250'} height={'2'}  src="/cc5.jpg" alt="" className=" w-44 h-24 rounded-lg" />
+                    <button className="shadow-sm py-2 flex 2md:flex-row flex-col cursor-pointer focus:bg-color2  rounded-lg  border mt-4 2md:w-full min-w-96  items-center" onClick={() => setTab(cc)}>
+                        <Image width={'250'} height={'2'}  src="/cc5.jpg" alt="" className="ml-2 hover:saturate-200 w-44 h-24 rounded-lg" />
                         
 
                         <h1 className="ml-2 text-xl font-bold my-auto">Cloud-Native <span className="text-color5"> Computing</span>  Specialization</h1>
                         
                         
                     </button>
-                    <button className="py-2 flex cursor-pointer focus:bg-color2 rounded-lg" onClick={() => setTab(ac)}>
-                        <Image width={'250'} height={'2'}  src="/ac4.jpg" alt="" className=" w-44 h-24 rounded-lg" />
+                    <button className="shadow-sm py-2 flex 2md:flex-row flex-col cursor-pointer focus:bg-color2  rounded-lg  border mt-4 2md:w-full min-w-96  items-center" onClick={() => setTab(ac)}>
+                        <Image width={'250'} height={'2'}  src="/ac4.jpg" alt="" className="ml-2 hover:saturate-200 w-44 h-24 rounded-lg" />
                         
 
                         <h1 className="ml-2 text-xl font-bold my-auto">Ambient Computing and <span className="text-color5">IoT</span> Specialization</h1>
                         
                         
                     </button>
-                    <button className="py-2 flex cursor-pointer focus:bg-color2 rounded-lg" onClick={() => setTab(bs)}>
-                        <Image width={'250'} height={'2'}  src="/bs4.jpg" alt="" className=" w-44 h-24 rounded-lg" />
+                    <button className="shadow-sm py-2 flex 2md:flex-row flex-col cursor-pointer focus:bg-color2  rounded-lg  border mt-4 2md:w-full min-w-96  items-center" onClick={() => setTab(bs)}>
+                        <Image width={'250'} height={'2'}  src="/bs4.jpg" alt="" className="ml-2 hover:saturate-200 w-44 h-24 rounded-lg" />
                         
 
                         <h1 className="ml-2 text-xl font-bold my-auto">Genomics and <span className="text-color5">Bioinformatics</span>  Specialization</h1>
                         
                         
                     </button>
-                    <button className="py-2 flex cursor-pointer focus:bg-color2 rounded-lg"  onClick={() => setTab(am)}>
-                        <Image width={'250'} height={'2'}  src="/am2.jpg" alt="" className=" w-44 h-24 rounded-lg" />
+                    <button className="shadow-sm py-2 flex 2md:flex-row flex-col cursor-pointer focus:bg-color2  rounded-lg  border mt-4 2md:w-full min-w-96  items-center"  onClick={() => setTab(am)}>
+                        <Image width={'250'} height={'2'}  src="/am2.jpg" alt="" className="ml-2 hover:saturate-200 w-44 h-24 rounded-lg" />
                         
 
                         <h1 className="ml-2 text-xl font-bold my-auto">Network Programmability and <span className="text-color5">Automation</span> Specialization</h1>
@@ -119,18 +121,19 @@ export default function Special() {
                     
                     
                 </div>
-                <div className="   flex flex-col items-start  p-8 w-7/12  border shadow-md overflow-y-scroll">
+
+                <div className="   flex flex-col items-start 2md:mr-0  border-black p-2 2md:p-8 2md:w-7/12 w-full rounded-md shadow-md overflow-y-scroll">
                     <h1 className="text-color1 mb-1 mt-2">Specialized Tracks</h1>
                     <h1 className="text-2xl font-bold mb-4 ">{tab.h0}</h1>
                     <p className="text-lg font-medium mb-4">{tab.desc}</p>
                     <button className=" bg-color5 text-white rounded-lg p-1 text-lg mb-4">Learn More</button>
                     <div className="flex">
-                    <div className="  w-5/12 p-2 shadow-lg">
+                    <div className="  w-6/12 p-2 shadow-lg">
 
                     <h1 className="text-xl font-bold">{tab.h1}</h1>
                     <p className="text-lg font-medium">{tab.h1desc}</p>
                     </div>
-                    <div className="  w-5/12 p-2 shadow-lg">
+                    <div className="  w-6/12 p-2 shadow-lg">
 
                     <h1 className="text-xl font-bold">{tab.h2}</h1>
                     <p className="text-lg font-medium">{tab.h2desc}</p>

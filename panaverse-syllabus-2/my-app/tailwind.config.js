@@ -24,6 +24,7 @@ module.exports = {
         "color4": '#DBEDF3',
         "color5": '#B4162D',
         "color6": '#CCCCCC',
+        "color7": '#03001C',
         
 
       },
@@ -34,6 +35,7 @@ module.exports = {
         '113': '40rem',
         '103': '1000px',
         '102': '25rem',
+        '126': '25.5rem',
         '111': '75%',
         '85': '18.75rem',
         '0.5/12': '7.3%'
@@ -53,11 +55,14 @@ module.exports = {
         '2xs': '4rem',
         '5/12': '46%',
         '10/12': '83.333333%',
-        '110': '30rem'
+        '110': '30rem',
+        '96': '10rem',
       },
       minWidth:{
         '105': '28rem',
+        '96': '12rem',
         '110': '30rem'
+
       },
       gridTemplateColumns: {
         '14': '3fr 2fr',
@@ -77,6 +82,7 @@ module.exports = {
         'bg2' : 'url(/meta5.png)',
         'panaverse2' : 'url(/panaverse3.avif)',
         'pricingui' : 'url(/pricingui2.avif)',
+        'meta2': 'url(/bg-28.jpg)',
       },
       boxShadow: {
         '2lg': '0px 4px 4px rgba(0, 0, 0, 0.25)'

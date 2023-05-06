@@ -33,7 +33,7 @@ const Navbar = () => {
     <>
     <div className="hidden w-full shadow-2lg rounded-2md 2md:flex justify-center h-24 fixed z-10 bg-color4  border">
 
-    <div className="hidden lg:w-10/12 2md:w-full h-24  2md:flex  items-center  justify-between">
+    <div className="hidden xl:max-w-10/12 2md:w-full h-24  2md:flex  items-center  justify-between">
       <div className="flex">
 
       <Image width={140} height={'2'} src={"/logo.jpg"} alt={""} className="w-42 h-20 ml-10 mt-2" />
@@ -49,8 +49,8 @@ const Navbar = () => {
                           {navItems.Label}
                           <a href="" className=" text-xs">{navItems.subLabel}</a>
                         </a>
-                        <a href="#" className=" h-3/5 flex flex-col pl-2">
-                          {navItems.Label}
+                        <a href="./quarters/page.tsx" className=" h-3/5 flex flex-col pl-2 hover:bg-gray-300 rounded-lg ">
+                          {navItems.Label2}
                           <a href="" className=" text-xs">{navItems.subLabel}</a>
                         </a>
                    </div>

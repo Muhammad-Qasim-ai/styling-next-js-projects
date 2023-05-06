@@ -22,7 +22,7 @@ export default function Main(){
                 <p className=" font-medium text-xl">Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics Technologies </p>
                 <button className=" bg-color5 text-white rounded-lg p-2 px-3 text-lg ">Learn More</button>
             </div>
-            <Image width={'500'} height={'0'} src="/meta5.png" alt="asd" className="xl:w-110 2sm:w-102 w-72 rounded-md lg:mr-10 xl:mr-20 lg:mt-16 border-black 2md:mt-0 mt-10" />
+            <Image width={'500'} height={'0'} src="/meta5.png" alt="asd" className="xl:w-110 2sm:w-102 w-72 rounded-md mr-8 ml-10 lg:mt-16 border-black 2md:mt-0 mt-10" />
         </div>
         </div>
         
